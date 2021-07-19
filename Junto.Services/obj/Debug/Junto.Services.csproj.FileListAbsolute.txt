@@ -14,3 +14,7 @@ C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\EntityFrame
 C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csproj.CopyComplete
+C:\Users\curtr\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csprojAssemblyReference.cache
+C:\Users\curtr\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csproj.CoreCompileInputs.cache
+C:\Users\curtr\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.dll
+C:\Users\curtr\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.pdb

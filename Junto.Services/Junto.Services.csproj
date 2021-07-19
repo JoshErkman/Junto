@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Junto.Data\Junto.Data.csproj">
+      <Project>{802535C2-8D9B-41BD-964A-B5ECBE9320E5}</Project>
+      <Name>Junto.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Junto.Models\Junto.Models.csproj">
+      <Project>{87736E5D-F308-4ED6-B2C7-0BBFA2DFD5EA}</Project>
+      <Name>Junto.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

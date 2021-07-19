@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageModels\MessageCreate.cs" />
+    <Compile Include="MessageModels\MessageDetail.cs" />
+    <Compile Include="MessageModels\MessageEdit.cs" />
+    <Compile Include="MessageModels\MessageListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
