@@ -1,0 +1,16 @@
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Junto.Services.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Junto.Services.pdb
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csprojAssemblyReference.cache
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csproj.CoreCompileInputs.cache
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.pdb
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Junto.Services.dll.config
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\EntityFramework.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\EntityFramework.xml
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\erkma\OneDrive\Desktop\Junto\Junto\Junto.Services\obj\Debug\Junto.Services.csproj.CopyComplete
