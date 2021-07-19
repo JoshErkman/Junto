@@ -11,10 +11,10 @@ namespace Junto.Models.Team
    public  class TeamDetail
     {
         public int TeamId { get; set; }
-        public string Name { get; set; }
+        public string TeamName { get; set; }
 
-        public virtual List<Channel> Channels { get; set; }
+     //  public virtual List<Channel> Channels { get; set; }
 
-        public virtual List<ApplicationUser> Users { get; set; }
+      // public virtual List<ApplicationUser> Users { get; set; }
     }
 }

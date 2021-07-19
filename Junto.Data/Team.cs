@@ -16,8 +16,8 @@ namespace Junto.Data
 
         public Guid UserId { get; set; }
 
-        public virtual List<Channel> Channels { get; set; }
+        //public virtual List<Channel> Channels { get; set; }
 
-        public virtual List<ApplicationUser> Users { get; set; }
+       // public virtual List<ApplicationUser> Users { get; set; }
     }
 }
