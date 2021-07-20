@@ -72,8 +72,8 @@ namespace Junto.Services
                     {
                         TeamId = entity.TeamId,
                         TeamName = entity.TeamName,
-                        Channels = entity.Channels,
-                        Users = entity.Users
+                      //  Channels = entity.Channels,
+                     //   Users = entity.Users
                     };
             }
         }
