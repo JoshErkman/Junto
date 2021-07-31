@@ -57,6 +57,7 @@
     <Compile Include="ChannelService.cs" />
     <Compile Include="MessageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
