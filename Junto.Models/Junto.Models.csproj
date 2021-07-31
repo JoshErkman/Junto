@@ -58,6 +58,10 @@
     <Compile Include="Channel\ChannelDetail.cs" />
     <Compile Include="Channel\ChannelEdit.cs" />
     <Compile Include="Channel\ChannelListItem.cs" />
+    <Compile Include="Message\MessageCreate.cs" />
+    <Compile Include="Message\MessageDetail.cs" />
+    <Compile Include="Message\MessageEdit.cs" />
+    <Compile Include="Message\MessageListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team\TeamCreate.cs" />
     <Compile Include="Team\TeamDetail.cs" />
