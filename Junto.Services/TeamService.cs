@@ -24,7 +24,7 @@ namespace Junto.Services
             var entity =
                 new Team()
                 {
-                    UserId = _userId,
+                    UserId = _userId.ToString(),
                     TeamName = model.TeamName,
                     //Channels = model.Channels,
                     //Users = model.Users
@@ -43,7 +43,7 @@ namespace Junto.Services
                 var query =
                     ctx
                     .Teams
-                    .Where(e => e.UserId == _userId)
+                    .Where(e => e.UserId == _userId.ToString())
                     .Select(
                         e =>
                         new TeamListItem
@@ -65,7 +65,7 @@ namespace Junto.Services
                 var entity =
                     ctx
                     .Teams
-                    .Where(e => e.UserId == _userId)
+                    .Where(e => e.UserId == _userId.ToString())
                     .Single(e => e.TeamId == id);
                 return
                     new TeamDetail

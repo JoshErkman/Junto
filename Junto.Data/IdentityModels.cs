@@ -50,6 +50,8 @@ namespace Junto.WebAPI.Models
             .Configurations
             .Add(new IdentityUserLoginConfiguration())
             .Add(new IdentityUserRoleConfiguration());
+
+
         }
     }
 

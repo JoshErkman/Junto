@@ -12,44 +12,45 @@ namespace Junto.WebAPI.Controllers
 {
     public class MessageController : ApiController
     {
-        public MessageService CreateMessageService()
+        private MessageService CreatedMessageService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var messageservice = new MessageService(userId);
             return messageservice;
         }
-        public IHttpActionResult Post(MessageCreate message)
+        [HttpPost]
+        public IHttpActionResult CreateMessage(MessageCreate message)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            var service = CreateMessageService();
+            var service = CreatedMessageService();
             if (!service.CreateMessage(message))
                 return InternalServerError();
             return Ok();
         }
-
-        public IHttpActionResult Get(int id)
+        [HttpGet]
+        public IHttpActionResult GetMessage(int id)
         {
-            MessageService messageService = CreateMessageService();
+            MessageService messageService = CreatedMessageService();
             var message = messageService.GetMessageById(id);
             return Ok(message);
         }
-
-        public IHttpActionResult Put(MessageEdit message)
+        [HttpPut]
+        public IHttpActionResult EditMessage(MessageEdit message)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            var service = CreateMessageService();
+            var service = CreatedMessageService();
             if (!service.UpdateMessage(message))
             {
                 return InternalServerError();
             }
             return Ok();
         }
-
-        public IHttpActionResult Delete(int id)
+        [HttpDelete]
+        public IHttpActionResult DeleteMessage(int id)
         {
-            var service = CreateMessageService();
+            var service = CreatedMessageService();
             if (!service.DeleteMessage(id))
             {
                 return InternalServerError();

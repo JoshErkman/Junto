@@ -13,7 +13,7 @@ namespace Junto.Data
         [Key]
         public int MessageId { get; set; }
         public string Body { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public DateTime TimeStamp { get; set; }
         public int ChannelId { get; set; }
