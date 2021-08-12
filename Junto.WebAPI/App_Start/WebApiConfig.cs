@@ -14,7 +14,7 @@ namespace Junto.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var cors = new EnableCorsAttribute("*", "*", "PUT,GET,UPDATE,DELETE");
+            var cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();

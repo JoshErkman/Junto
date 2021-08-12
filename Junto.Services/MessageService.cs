@@ -25,7 +25,7 @@ namespace Junto.Services
                 {
                     Body = model.MessageBody,
                     TimeStamp = DateTime.Now,
-                    UserId = _userId,
+                    Id = _userId.ToString(),
                     ChannelId = model.ChannelId,
                     TeamId = model.TeamId
                 };
@@ -45,7 +45,7 @@ namespace Junto.Services
                 var query =
                     ctx
                     .Messages
-                    .Where(e => e.UserId == _userId)
+                    .Where(e => e.Id == _userId.ToString())
                     .Select(
                         e =>
                         new MessageListItem
@@ -67,7 +67,7 @@ namespace Junto.Services
                 var entity =
                     ctx
                     .Messages
-                    .Where(e => e.UserId == _userId)
+                    .Where(e => e.Id == _userId.ToString())
                     .Single(e => e.MessageId == id);
                 return
                     new MessageDetail
