@@ -50,6 +50,12 @@ namespace Junto.WebAPI.Models
             .Configurations
             .Add(new IdentityUserLoginConfiguration())
             .Add(new IdentityUserRoleConfiguration());
+
+            modelBuilder.Entity<Message>()
+                .HasRequired(m => m.Team)
+                .WithMany()
+                //.HasForeignKey(m => m.TeamId)
+                .WillCascadeOnDelete(false);
         }
     }
 
