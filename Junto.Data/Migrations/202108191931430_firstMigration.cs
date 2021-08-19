@@ -1,9 +1,9 @@
-namespace Junto.Data.Migrations
+﻿namespace Junto.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initcreate : DbMigration
+    public partial class firstMigration : DbMigration
     {
         public override void Up()
         {
@@ -29,9 +29,11 @@ namespace Junto.Data.Migrations
                     {
                         TeamId = c.Int(nullable: false, identity: true),
                         TeamName = c.String(),
-                        UserId = c.Guid(nullable: false),
+                        Id = c.String(maxLength: 128),
                     })
-                .PrimaryKey(t => t.TeamId);
+                .PrimaryKey(t => t.TeamId)
+                .ForeignKey("dbo.ApplicationUser", t => t.Id)
+                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.ApplicationUser",
@@ -101,19 +103,18 @@ namespace Junto.Data.Migrations
                     {
                         MessageId = c.Int(nullable: false, identity: true),
                         Body = c.String(),
-                        UserId = c.Guid(nullable: false),
+                        Id = c.String(maxLength: 128),
                         TimeStamp = c.DateTime(nullable: false),
                         ChannelId = c.Int(nullable: false),
                         TeamId = c.Int(nullable: false),
-                        User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.MessageId)
                 .ForeignKey("dbo.Channel", t => t.ChannelId, cascadeDelete: true)
-                .ForeignKey("dbo.Team", t => t.TeamId, cascadeDelete: false)
-                .ForeignKey("dbo.ApplicationUser", t => t.User_Id)
+                .ForeignKey("dbo.Team", t => t.TeamId)
+                .ForeignKey("dbo.ApplicationUser", t => t.Id)
+                .Index(t => t.Id)
                 .Index(t => t.ChannelId)
-                .Index(t => t.TeamId)
-                .Index(t => t.User_Id);
+                .Index(t => t.TeamId);
             
             CreateTable(
                 "dbo.IdentityRole",
@@ -129,21 +130,23 @@ namespace Junto.Data.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
-            DropForeignKey("dbo.Message", "User_Id", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Message", "Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.Message", "TeamId", "dbo.Team");
             DropForeignKey("dbo.Message", "ChannelId", "dbo.Channel");
             DropForeignKey("dbo.Channel", "Id", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Channel", "TeamId", "dbo.Team");
+            DropForeignKey("dbo.Team", "Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
-            DropForeignKey("dbo.Channel", "TeamId", "dbo.Team");
-            DropIndex("dbo.Message", new[] { "User_Id" });
             DropIndex("dbo.Message", new[] { "TeamId" });
             DropIndex("dbo.Message", new[] { "ChannelId" });
+            DropIndex("dbo.Message", new[] { "Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.Team", new[] { "Id" });
             DropIndex("dbo.Channel", new[] { "Id" });
             DropIndex("dbo.Channel", new[] { "TeamId" });
             DropTable("dbo.IdentityRole");
